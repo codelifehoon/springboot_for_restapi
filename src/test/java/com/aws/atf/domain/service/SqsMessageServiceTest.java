@@ -16,10 +16,10 @@ class SqsMessageServiceTest {
     @Autowired
     SqsMessageService sqsMessageService;
 
-    @Test
-    void sendMessage() {
-        String payload ="payload msg";
-        String queueUrl ="https://sqs.ap-northeast-2.amazonaws.com/120139792823/dev-atf-order-sqs";
-        sqsMessageService.sendMessage(queueUrl,payload);
-    }
+//    @Test
+//    void sendMessage() {
+//        String payload ="payload msg";
+//        String queueUrl ="https://sqs.ap-northeast-2.amazonaws.com/120139792823/dev-atf-order-sqs";
+//        sqsMessageService.sendMessage(queueUrl,payload);
+//    }
 }
