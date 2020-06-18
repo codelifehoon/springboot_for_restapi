@@ -34,10 +34,10 @@ dependencies {
 	implementation 'io.springfox:springfox-swagger2:2.9.2'
 	implementation 'io.springfox:springfox-swagger-ui:2.9.2'
 
-	implementation platform('software.amazon.awssdk:bom:2.13.38')
-	implementation 'com.amazonaws:aws-java-sdk-sqs:1.11.804'
 
-
+	implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.804')
+	implementation 'com.amazonaws:aws-java-sdk-sqs'
+	implementation 'com.amazonaws:aws-java-sdk-ec2'
 
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {

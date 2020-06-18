@@ -18,6 +18,8 @@ class SqsMessageServiceTest {
 
     @Test
     void sendMessage() {
-//        sqsMessageService.sendMessage(payload);
+        String payload ="payload msg";
+        String queueUrl ="https://sqs.ap-northeast-2.amazonaws.com/120139792823/dev-atf-order-sqs";
+        sqsMessageService.sendMessage(queueUrl,payload);
     }
 }
