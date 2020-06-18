@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="10 seconds">
+
+
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <springProfile name="local">
+        <root level="debug">
+            <appender-ref ref="CONSOLE"/>
+        </root>
+
+    </springProfile>
+
+    <springProfile name="dev">
+        <property name="appLogPath" value="/home/ec2-user/app/atf"/>
+        <appender name="defaultAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>
+                ${appLogPath}/atfLog.log
+            </file>x
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>${appLogPath}/atfLog.%d{yyyy-MM-dd}.log</fileNamePattern>
+            </rollingPolicy>
+
+            <encoder>
+                <charset>UTF-8</charset>
+                <pattern>%d{HH:mm:ss.SS} %-5level%X{PAS_PID}%logger{36} %msg%n
+                </pattern>
+            </encoder>
+        </appender>
+
+        <root level="debug">
+            <appender-ref ref="defaultAppender"/>
+        </root>
+    </springProfile>
+
+
+</configuration>
+

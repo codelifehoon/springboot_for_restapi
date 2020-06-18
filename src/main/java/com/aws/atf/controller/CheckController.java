@@ -12,7 +12,7 @@ public class CheckController {
     @GetMapping("/v1/check")
     public String getCheck(){
         log.debug("##### call getCheck");
-        System.out.println("##### call getCheck");
+//        System.out.println("##### call getCheck");
         return "OK";
     }
 }
