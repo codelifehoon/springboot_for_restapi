@@ -13,7 +13,8 @@
     </springProfile>
 
     <springProfile name="dev">
-        <property name="appLogPath" value="/home/ec2-user/app/atf"/>
+        <property name="appLogPath" value="/home/ec2-user/app/log/atf"/>
+
         <appender name="defaultAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
             <file>
                 ${appLogPath}/atfLog.log
