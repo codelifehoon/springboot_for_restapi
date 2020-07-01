@@ -28,8 +28,8 @@ class CheckControllerTest {
 
     @Test
     void getCheck() {
-
-        System.out.println("#####");
+        String springVersion = org.springframework.core.SpringVersion.getVersion();
+        System.out.println("#####" + springVersion);
     }
 
     @Test
@@ -59,3 +59,4 @@ class CheckControllerTest {
     }
 
 }
+

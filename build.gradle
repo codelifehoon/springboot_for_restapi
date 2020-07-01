@@ -38,6 +38,10 @@ dependencies {
 	implementation platform('com.amazonaws:aws-java-sdk-bom:1.11.804')
 	implementation 'com.amazonaws:aws-java-sdk-sqs'
 	implementation 'com.amazonaws:aws-java-sdk-ec2'
+	implementation 'com.amazonaws:aws-java-sdk:1.11.812'
+	implementation 'com.amazonaws:aws-java-sdk-core:1.11.812'
+
+	implementation 'com.amazonaws:aws-java-sdk-dynamodb:1.11.812'
 
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
